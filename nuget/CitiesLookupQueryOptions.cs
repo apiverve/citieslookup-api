@@ -12,9 +12,14 @@ namespace APIVerve.API.CitiesLookup
     {
         /// <summary>
         /// The city name for which you want to get the data (e.g., New York)
-        /// Example: San Francisco
         /// </summary>
         [JsonProperty("city")]
         public string City { get; set; }
+
+        /// <summary>
+        /// Limit number of cities that match your search criteria
+        /// </summary>
+        [JsonProperty("limit")]
+        public string Limit { get; set; }
     }
 }
