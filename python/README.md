@@ -44,7 +44,10 @@ from apiverve_citieslookup.apiClient import CitieslookupAPIClient
 # Initialize the client with your APIVerve API key
 api = CitieslookupAPIClient("[YOUR_API_KEY]")
 
-query = { "city": "San Francisco", "limit": 1 }
+query = {
+    "city": "San Francisco",
+    "limit": 1
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "city": "San Francisco", "limit": 1 }
+query = {
+    "city": "San Francisco",
+    "limit": 1
+}
 ```
 
 ###### Simple Request
@@ -402,7 +408,10 @@ from apiverve_citieslookup.apiClient import CitieslookupAPIClient, CitieslookupA
 
 api = CitieslookupAPIClient("[YOUR_API_KEY]")
 
-query = { "city": "San Francisco", "limit": 1 }
+query = {
+    "city": "San Francisco",
+    "limit": 1
+}
 
 try:
     result = api.execute(query)
@@ -423,7 +432,10 @@ from apiverve_citieslookup.apiClient import CitieslookupAPIClient, CitieslookupA
 
 api = CitieslookupAPIClient("[YOUR_API_KEY]")
 
-query = { "city": "San Francisco", "limit": 1 }
+query = {
+    "city": "San Francisco",
+    "limit": 1
+}
 
 try:
     result = api.execute(query)
@@ -457,7 +469,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_citieslookup.apiClient import CitieslookupAPIClient, CitieslookupAPIClientError
 
-query = { "city": "San Francisco", "limit": 1 }
+query = {
+    "city": "San Francisco",
+    "limit": 1
+}
 
 # Using context manager ensures proper cleanup
 with CitieslookupAPIClient("[YOUR_API_KEY]") as api:
@@ -483,7 +498,10 @@ from apiverve_citieslookup.apiClient import CitieslookupAPIClient
 # Enable debug mode
 api = CitieslookupAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "city": "San Francisco", "limit": 1 }
+query = {
+    "city": "San Francisco",
+    "limit": 1
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -498,8 +516,12 @@ from apiverve_citieslookup.apiClient import CitieslookupAPIClient
 
 api = CitieslookupAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "city": "San Francisco",
+    "limit": 1
+}
+
 try:
-    query = { "city": "San Francisco", "limit": 1 }
     result = api.execute(query)
     print(result)
 finally:
