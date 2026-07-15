@@ -4,42 +4,45 @@ declare module '@apiverve/citieslookup' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface citieslookupResponse {
     status: string;
     error: string | null;
     data: CitiesLookupData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface CitiesLookupData {
-      search:      string;
+      search:      null | string;
       foundCities: FoundCity[];
   }
   
   interface FoundCity {
-      name:        string;
-      altName:     string;
-      country:     string;
-      featureCode: FeatureCode;
-      population:  number;
-      loc:         LOC;
-  }
-  
-  enum FeatureCode {
-      Ppl = "PPL",
-      Ppla = "PPLA",
-      Ppla2 = "PPLA2",
-      Pplx = "PPLX",
+      name:               null | string;
+      altName:            null | string;
+      country:            null | string;
+      countryName:        null | string;
+      featureCode:        null | string;
+      population:         number | null;
+      populationCategory: null | string;
+      loc:                LOC;
   }
   
   interface LOC {
-      type:        Type;
-      coordinates: number[];
-  }
-  
-  enum Type {
-      Point = "Point",
+      type:        null | string;
+      coordinates: (number | null)[];
   }
 
   export default class citieslookupWrapper {
