@@ -59,16 +59,18 @@ paths:
                 data:
                   search: San Francisco
                   foundCities:
-                    - name: San Francisco de Laishí
+                    - name: San Francisco
                       altName: ''
-                      country: AR
+                      country: US
+                      countryName: United States
                       featureCode: PPLA2
-                      population: 4384
+                      population: 874961
+                      populationCategory: major
                       loc:
                         type: Point
                         coordinates:
-                          - -58.63039
-                          - -26.24262
+                          - -122.4194
+                          - 37.7749
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
