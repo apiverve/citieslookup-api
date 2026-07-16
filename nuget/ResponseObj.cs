@@ -25,6 +25,9 @@ namespace APIVerve.API.CitiesLookup
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -47,11 +50,17 @@ namespace APIVerve.API.CitiesLookup
         [JsonProperty("country")]
         public string Country { get; set; }
 
+        [JsonProperty("countryName")]
+        public string CountryName { get; set; }
+
         [JsonProperty("featureCode")]
-        public FeatureCode FeatureCode { get; set; }
+        public string FeatureCode { get; set; }
 
         [JsonProperty("population")]
-        public long Population { get; set; }
+        public long? Population { get; set; }
+
+        [JsonProperty("populationCategory")]
+        public string PopulationCategory { get; set; }
 
         [JsonProperty("loc")]
         public Loc Loc { get; set; }
@@ -60,13 +69,21 @@ namespace APIVerve.API.CitiesLookup
     public partial class Loc
     {
         [JsonProperty("type")]
-        public TypeEnum Type { get; set; }
+        public string Type { get; set; }
 
         [JsonProperty("coordinates")]
-        public double[] Coordinates { get; set; }
+        public double?[] Coordinates { get; set; }
     }
 
-    public enum FeatureCode { Ppl, Ppla, Ppla2, Pplx };
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
 
-    public enum TypeEnum { Point };
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
+    }
 }
