@@ -1,0 +1,49 @@
+{
+    "name": "apiverve/citieslookup",
+    "description": "Cities Lookup is a simple tool for looking up city data. It returns the city name, population, and more.",
+    "version": "1.2.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "APIVerve",
+            "email": "hello@apiverve.com",
+            "homepage": "https://apiverve.com"
+        }
+    ],
+    "keywords": [
+        "api",
+        "apiverve",
+        "citieslookup",
+        "cities lookup",
+        "city lookup",
+        "cities data",
+        "city data",
+        "cities lookup api"
+    ],
+    "homepage": "https://apiverve.com/marketplace/citieslookup?utm_source=php&utm_medium=homepage",
+    "support": {
+        "email": "hello@apiverve.com",
+        "docs": "https://docs.apiverve.com/ref/citieslookup",
+        "source": "https://github.com/apiverve/citieslookup-API/tree/main/php"
+    },
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "APIVerve\\Citieslookup\\": "php/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "APIVerve\\Citieslookup\\Tests\\": "php/tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
