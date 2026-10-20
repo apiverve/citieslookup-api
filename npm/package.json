@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/citieslookup",
-  "version": "1.2.0",
-  "description": "Cities Lookup is a simple tool for looking up city data. It returns the city name, population, and more.",
+  "version": "1.2.2",
+  "description": "Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name. Paid plans add GeoJSON coordinates and custom match limits.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "cities lookup", "city lookup", "cities data", "city data", "cities lookup api"
+    "city lookup api", "cities api", "city api", "city search api", "free cities api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/citieslookup-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/citieslookup?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/citieslookup?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
