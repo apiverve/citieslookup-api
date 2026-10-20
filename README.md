@@ -1,13 +1,13 @@
-# [Cities Lookup API](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Cities Lookup API](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Cities Lookup is a simple tool for looking up city data. It returns the city name, population, and more.
+Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name. Paid plans add GeoJSON coordinates and custom match limits.
 
 The Cities Lookup API provides a simple, reliable way to integrate cities lookup functionality into your applications. Built for developers who need production-ready cities lookup capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/citieslookup-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Cities Lookup API](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Cities Lookup API](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/citieslookup](https://docs.apiverve.com/ref/citieslookup)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -238,7 +238,7 @@ A real response from the Cities Lookup API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Cities Lookup API](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Cities Lookup API](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Cities Lookup
   description: >-
-    Cities Lookup is a simple tool for looking up city data. It returns the city
-    name, population, and more.
+    Cities Lookup is a city search API that searches over 150,000 global cities
+    to find country codes, population counts, and city size classifications by
+    name. Paid plans add GeoJSON coordinates and custom match limits.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/citieslookup:
     get:
-      summary: Lookup City
+      summary: Cities Lookup
       description: Lookup city data based on the city name
       operationId: citieslookup
       parameters:
