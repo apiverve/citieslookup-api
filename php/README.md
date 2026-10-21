@@ -1,6 +1,6 @@
 # Cities Lookup API - PHP Package
 
-Cities Lookup is a simple tool for looking up city data. It returns the city name, population, and more.
+Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name. Paid plans add GeoJSON coordinates and custom match limits.
 
 ## Installation
 
@@ -102,11 +102,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/citieslookup?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/citieslookup?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/citieslookup?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/citieslookup?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/citieslookup?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/citieslookup?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
