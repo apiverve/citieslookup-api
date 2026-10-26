@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/citieslookup",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name. Paid plans add GeoJSON coordinates and custom match limits.",
   "main": "index.js",
   "types": "index.d.ts",
