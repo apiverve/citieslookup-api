@@ -1,7 +1,7 @@
 name: apiverve_citieslookup
-description: Cities Lookup is a simple tool for looking up city data. It returns the city name, population, and more.
-version: 1.1.14
-homepage: https://apiverve.com/marketplace/citieslookup?utm_source=dart&utm_medium=homepage
+description: "Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name. Paid plans add GeoJSON coordinates and custom match limits."
+version: 1.2.3
+homepage: https://apiverve.com/marketplace/citieslookup?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/citieslookup-api/tree/main/dart
 
 environment:

@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// Cities Lookup API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/citieslookup?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/citieslookup?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [city] (required) - The city name for which you want to get the data (e.g., New York)
