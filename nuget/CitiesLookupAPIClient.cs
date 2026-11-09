@@ -68,6 +68,7 @@ namespace APIVerve.API.CitiesLookup
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
             { "city", new ValidationRule { Type = "string", Required = true } },
+            { "country", new ValidationRule { Type = "string", Required = false, MinLength = 2, MaxLength = 2 } },
             { "limit", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 20 } }
         };
 

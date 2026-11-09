@@ -17,6 +17,12 @@ namespace APIVerve.API.CitiesLookup
         public string City { get; set; }
 
         /// <summary>
+        /// Two-letter ISO country code to restrict matches to one country (e.g., US)
+        /// </summary>
+        [JsonProperty("country")]
+        public string Country { get; set; }
+
+        /// <summary>
         /// Limit number of cities that match your search criteria
         /// </summary>
         [JsonProperty("limit")]

@@ -1,7 +1,7 @@
 Cities Lookup API
 ============
 
-Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name. Paid plans add GeoJSON coordinates and custom match limits.
+Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name, with an optional country filter. Paid plans add region codes, capital status, GeoJSON coordinates and custom match limits.
 
 
 [![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.CitiesLookup.svg)](https://www.nuget.org/packages/APIVerve.API.CitiesLookup)
@@ -61,6 +61,7 @@ class Program
 
         var queryOptions = new CitiesLookupQueryOptions {
             City = "San Francisco",
+            Country = "US",
             Limit = 1
         };
 
@@ -126,6 +127,7 @@ public class Example
 
         var queryOptions = new CitiesLookupQueryOptions {
             City = "San Francisco",
+            Country = "US",
             Limit = 1
         };
 
@@ -159,6 +161,7 @@ public class Example
 
         var queryOptions = new CitiesLookupQueryOptions {
             City = "San Francisco",
+            Country = "US",
             Limit = 1
         };
 
@@ -197,6 +200,7 @@ public class Example
 
         var queryOptions = new CitiesLookupQueryOptions {
             City = "San Francisco",
+            Country = "US",
             Limit = 1
         };
 
@@ -254,6 +258,7 @@ public class Example
 
         var queryOptions = new CitiesLookupQueryOptions {
             City = "San Francisco",
+            Country = "US",
             Limit = 1
         };
 
@@ -296,6 +301,7 @@ apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new CitiesLookupQueryOptions {
     City = "San Francisco",
+    Country = "US",
     Limit = 1
 };
 
@@ -323,6 +329,7 @@ apiClient.SetLogger(message =>
 
 var queryOptions = new CitiesLookupQueryOptions {
     City = "San Francisco",
+    Country = "US",
     Limit = 1
 };
 
@@ -342,6 +349,7 @@ apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (defau
 
 var queryOptions = new CitiesLookupQueryOptions {
     City = "San Francisco",
+    Country = "US",
     Limit = 1
 };
 
@@ -355,6 +363,7 @@ The API client implements `IDisposable` for proper resource cleanup:
 ```csharp
 var queryOptions = new CitiesLookupQueryOptions {
     City = "San Francisco",
+    Country = "US",
     Limit = 1
 };
 
@@ -381,17 +390,19 @@ using (var apiClient = new CitiesLookupAPIClient("[YOUR_API_KEY]"))
         "name": "San Francisco",
         "altName": "",
         "country": "US",
-        "countryName": "United States",
         "featureCode": "PPLA2",
-        "population": 874961,
-        "populationCategory": "major",
+        "population": 864816,
         "loc": {
           "type": "Point",
           "coordinates": [
-            -122.4194,
-            37.7749
+            -122.41942,
+            37.77493
           ]
-        }
+        },
+        "regionCode": "CA",
+        "countryName": "United States",
+        "populationCategory": "large",
+        "isCapital": false
       }
     ]
   }

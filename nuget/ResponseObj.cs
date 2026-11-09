@@ -50,20 +50,26 @@ namespace APIVerve.API.CitiesLookup
         [JsonProperty("country")]
         public string Country { get; set; }
 
-        [JsonProperty("countryName")]
-        public string CountryName { get; set; }
-
         [JsonProperty("featureCode")]
         public string FeatureCode { get; set; }
 
         [JsonProperty("population")]
         public long? Population { get; set; }
 
+        [JsonProperty("loc")]
+        public Loc Loc { get; set; }
+
+        [JsonProperty("regionCode")]
+        public string RegionCode { get; set; }
+
+        [JsonProperty("countryName")]
+        public string CountryName { get; set; }
+
         [JsonProperty("populationCategory")]
         public string PopulationCategory { get; set; }
 
-        [JsonProperty("loc")]
-        public Loc Loc { get; set; }
+        [JsonProperty("isCapital")]
+        public bool? IsCapital { get; set; }
     }
 
     public partial class Loc
