@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Citieslookup::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ city: "San Francisco", limit: 1 })
+    #   response = client.execute({ city: "San Francisco", country: "US", limit: 1 })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/citieslookup?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'city' => { type: 'string', required: true }, 'limit' => { type: 'integer', required: false, min: 1, max: 20 } }
+      VALIDATION_RULES = { 'city' => { type: 'string', required: true }, 'country' => { type: 'string', required: false, min_length: 2, max_length: 2 }, 'limit' => { type: 'integer', required: false, min: 1, max: 20 } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
