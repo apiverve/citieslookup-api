@@ -4,7 +4,8 @@ info:
   description: >-
     Cities Lookup is a city search API that searches over 150,000 global cities
     to find country codes, population counts, and city size classifications by
-    name. Paid plans add GeoJSON coordinates and custom match limits.
+    name, with an optional country filter. Paid plans add region codes, capital
+    status, GeoJSON coordinates and custom match limits.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -20,7 +21,7 @@ paths:
   /v1/citieslookup:
     get:
       summary: Cities Lookup
-      description: Lookup city data based on the city name
+      description: Lookup city data based on the city name, optionally filtered by country
       operationId: citieslookup
       parameters:
         - name: city
@@ -30,6 +31,15 @@ paths:
           required: true
           description: The city name for which you want to get the data (e.g., New York)
           example: San Francisco
+        - name: country
+          in: query
+          schema:
+            type: string
+          required: false
+          description: >-
+            Two-letter ISO country code to restrict matches to one country
+            (e.g., US)
+          example: US
         - name: limit
           in: query
           schema:
@@ -63,15 +73,17 @@ paths:
                     - name: San Francisco
                       altName: ''
                       country: US
-                      countryName: United States
                       featureCode: PPLA2
-                      population: 874961
-                      populationCategory: major
+                      population: 864816
                       loc:
                         type: Point
                         coordinates:
-                          - -122.4194
-                          - 37.7749
+                          - -122.41942
+                          - 37.77493
+                      regionCode: CA
+                      countryName: United States
+                      populationCategory: large
+                      isCapital: false
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':

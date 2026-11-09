@@ -1,6 +1,6 @@
 # [Cities Lookup API](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name. Paid plans add GeoJSON coordinates and custom match limits.
+Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name, with an optional country filter. Paid plans add region codes, capital status, GeoJSON coordinates and custom match limits.
 
 The Cities Lookup API provides a simple, reliable way to integrate cities lookup functionality into your applications. Built for developers who need production-ready cities lookup capabilities without the complexity of building from scratch.
 
@@ -31,7 +31,8 @@ The Cities Lookup API provides a simple, reliable way to integrate cities lookup
 async function callCitiesLookupAPI() {
     try {
         const params = new URLSearchParams({
-            city: 'San Francisco'
+            city: 'San Francisco',
+            country: 'US'
         });
 
         const response = await fetch(`https://api.apiverve.com/v1/citieslookup?${params}`, {
@@ -54,7 +55,7 @@ callCitiesLookupAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/citieslookup?city=San%20Francisco" \
+curl -X GET "https://api.apiverve.com/v1/citieslookup?city=San%20Francisco&country=US" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -217,17 +218,19 @@ A real response from the Cities Lookup API:
         "name": "San Francisco",
         "altName": "",
         "country": "US",
-        "countryName": "United States",
         "featureCode": "PPLA2",
-        "population": 874961,
-        "populationCategory": "major",
+        "population": 864816,
         "loc": {
           "type": "Point",
           "coordinates": [
-            -122.4194,
-            37.7749
+            -122.41942,
+            37.77493
           ]
-        }
+        },
+        "regionCode": "CA",
+        "countryName": "United States",
+        "populationCategory": "large",
+        "isCapital": false
       }
     ]
   }

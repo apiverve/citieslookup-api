@@ -18,7 +18,7 @@ def call_citieslookup_api():
     """
     try:
         # Query parameters
-        params &#x3D; {&#x27;city&#x27;: &#x27;San Francisco&#x27;}
+        params &#x3D; {&#x27;city&#x27;: &#x27;San Francisco&#x27;, &#x27;country&#x27;: &#x27;US&#x27;}
 
         headers = {
             'x-api-key': API_KEY

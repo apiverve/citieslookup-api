@@ -15,7 +15,8 @@ async function callCitiesLookupAPI() {
   try {
     // Query parameters
     const params &#x3D; new URLSearchParams({
-            city: &#x27;San Francisco&#x27;
+            city: &#x27;San Francisco&#x27;,
+            country: &#x27;US&#x27;
         });
 
     const response = await fetch(`${API_URL}?${params}`, {
