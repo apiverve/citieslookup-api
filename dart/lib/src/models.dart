@@ -74,32 +74,38 @@ class CitieslookupDataFoundcitiesItem {
   String? name;
   String? altName;
   String? country;
-  String? countryName;
   String? featureCode;
   num? population;
-  String? populationCategory;
   CitieslookupDataFoundcitiesItemLoc? loc;
+  String? regionCode;
+  String? countryName;
+  String? populationCategory;
+  bool? isCapital;
 
   CitieslookupDataFoundcitiesItem({
     this.name,
     this.altName,
     this.country,
-    this.countryName,
     this.featureCode,
     this.population,
-    this.populationCategory,
     this.loc,
+    this.regionCode,
+    this.countryName,
+    this.populationCategory,
+    this.isCapital,
   });
 
   factory CitieslookupDataFoundcitiesItem.fromJson(Map<String, dynamic> json) => CitieslookupDataFoundcitiesItem(
       name: json['name'],
       altName: json['altName'],
       country: json['country'],
-      countryName: json['countryName'],
       featureCode: json['featureCode'],
       population: json['population'],
-      populationCategory: json['populationCategory'],
       loc: json['loc'] != null ? CitieslookupDataFoundcitiesItemLoc.fromJson(json['loc']) : null,
+      regionCode: json['regionCode'],
+      countryName: json['countryName'],
+      populationCategory: json['populationCategory'],
+      isCapital: json['isCapital'],
     );
 }
 
@@ -120,15 +126,18 @@ class CitieslookupDataFoundcitiesItemLoc {
 
 class CitieslookupRequest {
   String city;
+  String? country;
   int? limit;
 
   CitieslookupRequest({
     required this.city,
+    this.country,
     this.limit,
   });
 
   Map<String, dynamic> toJson() => {
       'city': city,
+      if (country != null) 'country': country,
       if (limit != null) 'limit': limit,
     };
 }

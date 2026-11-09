@@ -50,6 +50,7 @@ final _formatPatterns = {
 ///
 /// Parameters:
 /// * [city] (required) - The city name for which you want to get the data (e.g., New York)
+/// * [country] - Two-letter ISO country code to restrict matches to one country (e.g., US) [minLength: 2, maxLength: 2]
 /// * [limit] - Limit number of cities that match your search criteria [min: 1, max: 20]
 class CitieslookupClient {
   final String apiKey;
@@ -59,6 +60,7 @@ class CitieslookupClient {
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'city': ValidationRule(type: 'string', required: true),
+    'country': ValidationRule(type: 'string', required: false, minLength: 2, maxLength: 2),
     'limit': ValidationRule(type: 'integer', required: false, min: 1, max: 20),
   };
 

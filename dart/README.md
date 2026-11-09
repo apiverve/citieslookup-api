@@ -1,6 +1,6 @@
 # Cities Lookup API - Dart/Flutter Client
 
-Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name. Paid plans add GeoJSON coordinates and custom match limits.
+Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name, with an optional country filter. Paid plans add region codes, capital status, GeoJSON coordinates and custom match limits.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_citieslookup.svg)](https://pub.dev/packages/apiverve_citieslookup)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_citieslookup: ^1.2.4
+  apiverve_citieslookup: ^1.2.5
 ```
 
 Then run:
@@ -35,6 +35,7 @@ void main() async {
   try {
     final response = await client.execute({
       'city': 'San Francisco',
+      'country': 'US',
       'limit': 1
     });
 
@@ -59,17 +60,19 @@ void main() async {
         "name": "San Francisco",
         "altName": "",
         "country": "US",
-        "countryName": "United States",
         "featureCode": "PPLA2",
-        "population": 874961,
-        "populationCategory": "major",
+        "population": 864816,
         "loc": {
           "type": "Point",
           "coordinates": [
-            -122.4194,
-            37.7749
+            -122.41942,
+            37.77493
           ]
-        }
+        },
+        "regionCode": "CA",
+        "countryName": "United States",
+        "populationCategory": "large",
+        "isCapital": false
       }
     ]
   }
