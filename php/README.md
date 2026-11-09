@@ -1,6 +1,6 @@
 # Cities Lookup API - PHP Package
 
-Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name. Paid plans add GeoJSON coordinates and custom match limits.
+Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name, with an optional country filter. Paid plans add region codes, capital status, GeoJSON coordinates and custom match limits.
 
 ## Installation
 
@@ -29,6 +29,7 @@ $client = new Client('YOUR_API_KEY');
 // Make a request
 $response = $client->execute([
     'city' => 'San Francisco',
+    'country' => 'US',
     'limit' => 1
 ]);
 
@@ -45,7 +46,7 @@ use APIVerve\Citieslookup\Exceptions\APIException;
 use APIVerve\Citieslookup\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute(['city' => 'San Francisco', 'limit' => 1]);
+    $response = $client->execute(['city' => 'San Francisco', 'country' => 'US', 'limit' => 1]);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
@@ -78,17 +79,19 @@ $client = new Client(
         "name": "San Francisco",
         "altName": "",
         "country": "US",
-        "countryName": "United States",
         "featureCode": "PPLA2",
-        "population": 874961,
-        "populationCategory": "major",
+        "population": 864816,
         "loc": {
           "type": "Point",
           "coordinates": [
-            -122.4194,
-            37.7749
+            -122.41942,
+            37.77493
           ]
-        }
+        },
+        "regionCode": "CA",
+        "countryName": "United States",
+        "populationCategory": "large",
+        "isCapital": false
       }
     ]
   }

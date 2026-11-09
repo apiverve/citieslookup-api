@@ -15,7 +15,7 @@ use APIVerve\Citieslookup\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['city' => 'San Francisco', 'limit' => 1]);
+ * $response = $client->execute(['city' => 'San Francisco', 'country' => 'US', 'limit' => 1]);
  * print_r($response);
  * ```
  *
@@ -35,6 +35,7 @@ class Client
      */
     private const VALIDATION_RULES = [
         'city' => ['type' => 'string', 'required' => true],
+        'country' => ['type' => 'string', 'required' => false, 'minLength' => 2, 'maxLength' => 2],
         'limit' => ['type' => 'integer', 'required' => false, 'min' => 1, 'max' => 20]
     ];
 
