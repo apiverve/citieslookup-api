@@ -1,10 +1,10 @@
 [project]
 name = "apiverve-citieslookup"
-version = "1.2.4"
+version = "1.2.5"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
-description = "Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name. Paid plans add GeoJSON coordinates and custom match limits."
+description = "Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name, with an optional country filter. Paid plans add region codes, capital status, GeoJSON coordinates and custom match limits."
 keywords = ["city lookup api", "cities api", "city api", "city search api", "free cities api"]
 readme = "README.md"
 requires-python = ">=3.9"

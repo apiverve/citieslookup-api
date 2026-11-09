@@ -25,6 +25,7 @@ class CitieslookupAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
         "city": {"type": "string", "required": True},
+        "country": {"type": "string", "required": False, "minLength": 2, "maxLength": 2},
         "limit": {"type": "integer", "required": False, "min": 1, "max": 20, "default": 1}
     }
 
