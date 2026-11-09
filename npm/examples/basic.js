@@ -16,6 +16,7 @@ const api = new citieslookupAPI({
 // Example query
 var query = {
   city: "San Francisco",
+  country: "US",
   limit: 1
 };
 

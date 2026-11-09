@@ -33,11 +33,13 @@ declare module '@apiverve/citieslookup' {
       name:               null | string;
       altName:            null | string;
       country:            null | string;
-      countryName:        null | string;
       featureCode:        null | string;
       population:         number | null;
-      populationCategory: null | string;
       loc:                LOC;
+      regionCode:         null | string;
+      countryName:        null | string;
+      populationCategory: null | string;
+      isCapital:          boolean | null;
   }
   
   interface LOC {

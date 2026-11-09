@@ -1,6 +1,6 @@
 # Cities Lookup API
 
-Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name. Paid plans add GeoJSON coordinates and custom match limits.
+Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name, with an optional country filter. Paid plans add region codes, capital status, GeoJSON coordinates and custom match limits.
 
 [![npm version](https://img.shields.io/npm/v/@apiverve/citieslookup.svg)](https://www.npmjs.com/package/@apiverve/citieslookup)
 
@@ -58,6 +58,7 @@ Using the API is simple. All you have to do is make a request. The API will retu
 ```javascript
 var query = {
   city: "San Francisco",
+  country: "US",
   limit: 1
 };
 
@@ -79,6 +80,7 @@ You can also use promises to make requests. The API returns a promise that you c
 ```javascript
 var query = {
   city: "San Francisco",
+  country: "US",
   limit: 1
 };
 
@@ -101,6 +103,7 @@ You can also use async/await to make requests. The API returns a promise that yo
 async function makeRequest() {
     var query = {
   city: "San Francisco",
+  country: "US",
   limit: 1
 };
 
@@ -128,17 +131,19 @@ async function makeRequest() {
         "name": "San Francisco",
         "altName": "",
         "country": "US",
-        "countryName": "United States",
         "featureCode": "PPLA2",
-        "population": 874961,
-        "populationCategory": "major",
+        "population": 864816,
         "loc": {
           "type": "Point",
           "coordinates": [
-            -122.4194,
-            37.7749
+            -122.41942,
+            37.77493
           ]
-        }
+        },
+        "regionCode": "CA",
+        "countryName": "United States",
+        "populationCategory": "large",
+        "isCapital": false
       }
     ]
   }
