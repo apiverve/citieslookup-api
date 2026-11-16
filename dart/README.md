@@ -1,6 +1,6 @@
 # Cities Lookup API - Dart/Flutter Client
 
-Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name, with an optional country filter. Paid plans add region codes, capital status, GeoJSON coordinates and custom match limits.
+Cities Lookup is a city search API that searches about 135,000 cities worldwide by name to find country codes, population counts and city size classifications, with an optional country filter. Paid plans add region codes, capital status, GeoJSON coordinates and up to 20 matches per search.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_citieslookup.svg)](https://pub.dev/packages/apiverve_citieslookup)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_citieslookup: ^1.2.5
+  apiverve_citieslookup: ^1.2.6
 ```
 
 Then run:
