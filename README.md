@@ -1,6 +1,6 @@
 # [Cities Lookup API](https://apiverve.com/marketplace/citieslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Cities Lookup is a city search API that searches over 150,000 global cities to find country codes, population counts, and city size classifications by name, with an optional country filter. Paid plans add region codes, capital status, GeoJSON coordinates and custom match limits.
+Cities Lookup is a city search API that searches about 135,000 cities worldwide by name to find country codes, population counts and city size classifications, with an optional country filter. Paid plans add region codes, capital status, GeoJSON coordinates and up to 20 matches per search.
 
 The Cities Lookup API provides a simple, reliable way to integrate cities lookup functionality into your applications. Built for developers who need production-ready cities lookup capabilities without the complexity of building from scratch.
 
